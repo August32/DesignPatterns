@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/builder.hpp
+iostream
+-
+string
+-
+utility
+-
+memory
+-
+cassert
+-
+
+../include/factory.hpp
+map
+-
+
+../include/prototype.hpp
+
+../include/singleton.hpp
+mutex
+-
+thread
+-
+
+C:/Users/12865/Desktop/DesignPatterns/main.cpp
+iostream
+-
+singleton.hpp
+C:/Users/12865/Desktop/DesignPatterns/singleton.hpp
+factory.hpp
+C:/Users/12865/Desktop/DesignPatterns/factory.hpp
+builder.hpp
+C:/Users/12865/Desktop/DesignPatterns/builder.hpp
+prototype.hpp
+C:/Users/12865/Desktop/DesignPatterns/prototype.hpp
+
