@@ -5,5 +5,6 @@ CMakeFiles/main.dir/main.cpp.obj
  ../include/builder.hpp
  ../include/factory.hpp
  ../include/prototype.hpp
+ ../include/proxy.hpp
  ../include/singleton.hpp
  C:/Users/12865/Desktop/DesignPatterns/main.cpp

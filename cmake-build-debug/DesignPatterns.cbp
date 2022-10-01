@@ -85,6 +85,9 @@
 		<Unit filename="C:/Users/12865/Desktop/DesignPatterns/include/prototype.hpp">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="C:/Users/12865/Desktop/DesignPatterns/include/proxy.hpp">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="C:/Users/12865/Desktop/DesignPatterns/main.cpp">
 			<Option target="main"/>
 		</Unit>

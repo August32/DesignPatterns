@@ -3,6 +3,7 @@
 #include "factory.hpp"
 #include "builder.hpp"
 #include "prototype.hpp"
+#include "proxy.hpp"
 
 using namespace std;
 
@@ -20,6 +21,9 @@ int main() {
 
     // 原型模式测试
 //    prototype_test();
+
+    // 代理模式测试
+//    proxy_test();
 
     return 0;
 }

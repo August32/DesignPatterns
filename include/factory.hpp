@@ -19,15 +19,15 @@
 // 共享类
 
 // 抽象产品类
-class WaferFile {
+class IWaferFile {
 public:
-    virtual ~WaferFile() = default;
+    virtual ~IWaferFile() = default;
 
     virtual int get_size_mm() = 0;  // 纯虚函数，使该类变为抽象类
 };
 
 // 具体产品类 - 1
-class TwelveIncWaferFile : public WaferFile {
+class TwelveIncWaferFile : public IWaferFile {
 public:
     int get_size_mm() override {
         std::cout << "12 Inc Wafer: " << m_size_mm << " mm" << std::endl;
@@ -39,7 +39,7 @@ private:
 };
 
 // 具体产品类 - 2
-class EightIncWaferFile : public WaferFile {
+class EightIncWaferFile : public IWaferFile {
 public:
     int get_size_mm() override {
         std::cout << "8 Inc Wafer: " << m_size_mm << " mm" << std::endl;
@@ -70,8 +70,8 @@ public:
     WaferFileEasyFactory &operator=(const WaferFileEasyFactory &) = delete;
 
 public:
-    static WaferFile *create_wafer_file(int size_inc) {
-        WaferFile *wafer_file = nullptr;
+    static IWaferFile *create_wafer_file(int size_inc) {
+        IWaferFile *wafer_file = nullptr;
 
         if (size_inc == 12) {
             wafer_file = new TwelveIncWaferFile();
@@ -98,13 +98,13 @@ public:
     WaferFileEasyFactory &operator=(const WaferFileEasyFactory &) = delete;
 
 private:
-    static std::map<int, WaferFile *> m_cached_wafer_file;
-    static WaferFile *m_twelve_inc_wafer_file;
-    static WaferFile *m_eight_inc_wafer_file;
+    static std::map<int, IWaferFile *> m_cached_wafer_file;
+    static IWaferFile *m_twelve_inc_wafer_file;
+    static IWaferFile *m_eight_inc_wafer_file;
 
 public:
-    static WaferFile *create_wafer_file(int size_inc) {
-        WaferFile *wafer_file = nullptr;
+    static IWaferFile *create_wafer_file(int size_inc) {
+        IWaferFile *wafer_file = nullptr;
 
         if (m_cached_wafer_file.find(size_inc) != m_cached_wafer_file.end()) {
             wafer_file = m_cached_wafer_file[size_inc];
@@ -122,11 +122,11 @@ public:
     }
 };
 
-WaferFile *WaferFileEasyFactory::m_twelve_inc_wafer_file = new TwelveIncWaferFile();
+IWaferFile *WaferFileEasyFactory::m_twelve_inc_wafer_file = new TwelveIncWaferFile();
 
-WaferFile *WaferFileEasyFactory::m_eight_inc_wafer_file = new EightIncWaferFile();
+IWaferFile *WaferFileEasyFactory::m_eight_inc_wafer_file = new EightIncWaferFile();
 
-std::map<int, WaferFile *> WaferFileEasyFactory::m_cached_wafer_file = {
+std::map<int, IWaferFile *> WaferFileEasyFactory::m_cached_wafer_file = {
         {12, m_twelve_inc_wafer_file},
         {8,  m_eight_inc_wafer_file}
 };
@@ -139,25 +139,25 @@ std::map<int, WaferFile *> WaferFileEasyFactory::m_cached_wafer_file = {
 // 2.工厂方法：先创建具体工厂，再通过具体工厂去创建具体产品，利用多态的特性
 
 // 抽象工厂类
-class WaferFileFactory {
+class IWaferFileFactory {
 public:
-    virtual ~WaferFileFactory() = default;
+    virtual ~IWaferFileFactory() = default;
 
-    virtual WaferFile *create_wafer_file() = 0;  // 纯虚函数，使该类变为抽象类
+    virtual IWaferFile *create_wafer_file() = 0;  // 纯虚函数，使该类变为抽象类
 };
 
 // 具体工厂类 - 1
-class TwelveIncWaferFileFactory : public WaferFileFactory {
+class TwelveIncWaferFileFactory : public IWaferFileFactory {
 public:
-    WaferFile *create_wafer_file() override {
+    IWaferFile *create_wafer_file() override {
         return new TwelveIncWaferFile();
     };
 };
 
 // 具体工厂类 - 2
-class EightIncWaferFileFactory : public WaferFileFactory {
+class EightIncWaferFileFactory : public IWaferFileFactory {
 public:
-    WaferFile *create_wafer_file() override {
+    IWaferFile *create_wafer_file() override {
         return new EightIncWaferFile();
     };
 };
@@ -168,16 +168,16 @@ public:
 // 共享类
 
 // 抽象产品类
-class Desktop {};
-class Laptop {};
+class IDesktop {};
+class ILaptop {};
 
 // 具体产品类 - 1
-class DELLDesktop : public Desktop {};
-class DELLLaptop : public Laptop {};
+class DELLDesktop : public IDesktop {};
+class DELLLaptop : public ILaptop {};
 
 // 具体产品类 - 2
-class HuaweiDesktop : public Desktop {};
-class HuaweiLaptop : public Laptop {};
+class HuaweiDesktop : public IDesktop {};
+class HuaweiLaptop : public ILaptop {};
 
 // **********************************************************************
 
@@ -185,35 +185,35 @@ class HuaweiLaptop : public Laptop {};
 // 3.抽象工厂：工厂可以生产各种产品，能够满足双分类的需求
 
 // 抽象工厂类（总厂）
-class Factory {
+class IComputerFactory {
 public:
-    virtual ~Factory() = default;
+    virtual ~IComputerFactory() = default;
 
-    virtual Desktop *create_desktop() = 0;
+    virtual IDesktop *create_desktop() = 0;
     
-    virtual Laptop *create_laptop() = 0;
+    virtual ILaptop *create_laptop() = 0;
 };
 
 // 具体工厂类 - 1
-class DELLFactory : public Factory {
+class DELLFactory : public IComputerFactory {
 public:
-     Desktop *create_desktop() override {
+     IDesktop *create_desktop() override {
          return new DELLDesktop();
      };
 
-     Laptop *create_laptop() override {
+     ILaptop *create_laptop() override {
          return new DELLLaptop();
      };
 };
 
 // 具体工厂类 - 2
-class HuaweiFactory : public Factory {
+class HuaweiFactory : public IComputerFactory {
 public:
-    Desktop *create_desktop() override {
+    IDesktop *create_desktop() override {
         return new HuaweiDesktop();
     };
 
-    Laptop *create_laptop() override {
+    ILaptop *create_laptop() override {
         return new HuaweiLaptop();
     };
 };

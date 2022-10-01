@@ -24,6 +24,8 @@ map
 
 ../include/prototype.hpp
 
+../include/proxy.hpp
+
 ../include/singleton.hpp
 mutex
 -
@@ -41,4 +43,6 @@ builder.hpp
 C:/Users/12865/Desktop/DesignPatterns/builder.hpp
 prototype.hpp
 C:/Users/12865/Desktop/DesignPatterns/prototype.hpp
+proxy.hpp
+C:/Users/12865/Desktop/DesignPatterns/proxy.hpp
 

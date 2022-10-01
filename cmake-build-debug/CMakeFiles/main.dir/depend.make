@@ -4,6 +4,7 @@
 CMakeFiles/main.dir/main.cpp.obj: ../include/builder.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/factory.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/prototype.hpp
+CMakeFiles/main.dir/main.cpp.obj: ../include/proxy.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/singleton.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../main.cpp
 

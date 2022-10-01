@@ -60,15 +60,15 @@ private:
 #if 0
 
 // 抽象产品建造者类
-class CarBuilder {
+class ICarBuilder {
 public:
-    virtual ~CarBuilder() = default;
+    virtual ~ICarBuilder() = default;
 
-    virtual CarBuilder *build_car_interior() = 0;
+    virtual ICarBuilder *build_car_interior() = 0;
 
-    virtual CarBuilder *build_car_wheel() = 0;  // 车轮
+    virtual ICarBuilder *build_car_wheel() = 0;  // 车轮
 
-    virtual CarBuilder *build_car_shell() = 0;  // 外壳
+    virtual ICarBuilder *build_car_shell() = 0;  // 外壳
 
     virtual Car *get_car() = 0;
 
@@ -76,26 +76,26 @@ public:
 };
 
 // 具体产品建造者类 - 1
-class CarABuilder : public CarBuilder {
+class CarABuilder : public ICarBuilder {
 public:
     CarABuilder() {
         m_car = new Car();
     }
 
 public:
-    CarBuilder *build_car_interior() override {
+    ICarBuilder *build_car_interior() override {
         m_car->set_interior("A interior");
 
         return this;
     };
 
-    CarBuilder *build_car_wheel() override {
+    ICarBuilder *build_car_wheel() override {
         m_car->set_wheel_size(8);
 
         return this;
     }
 
-    CarBuilder *build_car_shell() override {
+    ICarBuilder *build_car_shell() override {
         m_car->set_shell_length(50);
 
         return this;
@@ -115,26 +115,26 @@ private:
 };
 
 // 具体产品建造者类 - 2
-class CarBBuilder : public CarBuilder {
+class CarBBuilder : public ICarBuilder {
 public:
     CarBBuilder() {
         m_car = new Car();
     }
 
 public:
-    CarBuilder *build_car_interior() override {
+    ICarBuilder *build_car_interior() override {
         m_car->set_interior("B interior");
 
         return this;
     };
 
-    CarBuilder *build_car_wheel() override {
+    ICarBuilder *build_car_wheel() override {
         m_car->set_wheel_size(9);
 
         return this;
     }
 
-    CarBuilder *build_car_shell() override {
+    ICarBuilder *build_car_shell() override {
         m_car->set_shell_length(56);
 
         return this;
@@ -154,26 +154,26 @@ private:
 };
 
 // 具体产品建造者类 - 3
-class CarCBuilder : public CarBuilder {
+class CarCBuilder : public ICarBuilder {
 public:
     CarCBuilder() {
         m_car = new Car();
     }
 
 public:
-    CarBuilder *build_car_interior() override {
+    ICarBuilder *build_car_interior() override {
         m_car->set_interior("C interior");
 
         return this;
     };
 
-    CarBuilder *build_car_wheel() override {
+    ICarBuilder *build_car_wheel() override {
         m_car->set_wheel_size(10);
 
         return this;
     }
 
-    CarBuilder *build_car_shell() override {
+    ICarBuilder *build_car_shell() override {
         m_car->set_shell_length(58);
 
         return this;
@@ -195,7 +195,7 @@ private:
 // 产品指挥者类：负责执行建造过程
 class CarDirector {
 public:
-    explicit CarDirector(CarBuilder *car_builder) {
+    explicit CarDirector(ICarBuilder *car_builder) {
         m_car_builder = car_builder;
     }
 
@@ -216,14 +216,14 @@ public:
     }
 
 private:
-    CarBuilder *m_car_builder;
+    ICarBuilder *m_car_builder;
 };
 
 // **********************************************************************
 
 
 void builder_test(bool result) {
-    CarBuilder *car_builder = nullptr;
+    ICarBuilder *car_builder = nullptr;
 
     if (result) {
         car_builder = new CarBBuilder();
