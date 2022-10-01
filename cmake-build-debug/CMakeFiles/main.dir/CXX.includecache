@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/builder.hpp
+../include/Creational/builder.hpp
 iostream
 -
 string
@@ -18,19 +18,19 @@ memory
 cassert
 -
 
-../include/factory.hpp
+../include/Creational/factory.hpp
 map
 -
 
-../include/prototype.hpp
+../include/Creational/prototype.hpp
 
-../include/proxy.hpp
-
-../include/singleton.hpp
+../include/Creational/singleton.hpp
 mutex
 -
 thread
 -
+
+../include/Structural/proxy.hpp
 
 C:/Users/12865/Desktop/DesignPatterns/main.cpp
 iostream
