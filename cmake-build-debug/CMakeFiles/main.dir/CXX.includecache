@@ -30,6 +30,8 @@ mutex
 thread
 -
 
+../include/Structural/decorator.hpp
+
 ../include/Structural/proxy.hpp
 
 C:/Users/12865/Desktop/DesignPatterns/main.cpp
@@ -45,4 +47,6 @@ prototype.hpp
 C:/Users/12865/Desktop/DesignPatterns/prototype.hpp
 proxy.hpp
 C:/Users/12865/Desktop/DesignPatterns/proxy.hpp
+decorator.hpp
+C:/Users/12865/Desktop/DesignPatterns/decorator.hpp
 

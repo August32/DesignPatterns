@@ -4,6 +4,7 @@
 #include "builder.hpp"
 #include "prototype.hpp"
 #include "proxy.hpp"
+#include "decorator.hpp"
 
 using namespace std;
 
@@ -24,6 +25,9 @@ int main() {
 
     // 代理模式测试
 //    proxy_test();
+
+    // 装饰器模式测试
+//    decorator_test();
 
     return 0;
 }

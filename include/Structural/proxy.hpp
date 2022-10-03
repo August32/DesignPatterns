@@ -27,41 +27,39 @@ public:
 
 public:
     void play_video() override {
-        std::cout << "Play the video!" <<std::endl;
+        std::cout << "Play the video!" << std::endl;
     };
 };
 
 // 产品代理类
-class VedioPlayerProxy : public IVideoPlayer {
+class VideoPlayerProxy : public IVideoPlayer {
 public:
-    VedioPlayerProxy() = default;
+    VideoPlayerProxy() = default;
 
-    ~VedioPlayerProxy() override = default;
+    ~VideoPlayerProxy() override = default;
 
-    VedioPlayerProxy(const VedioPlayerProxy &) = delete;
+    VideoPlayerProxy(const VideoPlayerProxy &) = delete;
 
-    VedioPlayerProxy &operator=(const VedioPlayerProxy &) = delete;
+    VideoPlayerProxy &operator=(const VideoPlayerProxy &) = delete;
 
 public:
     void play_video() override {
-        std::cout << "Play a commercial!" <<std::endl;  // 播放视频前先播放一段广告
+        std::cout << "Play a commercial!" << std::endl;  // 播放视频前先播放一段广告
 
-        viewer.play_video();
+        video_player.play_video();
     };
 
 private:
-    VideoPlayer viewer;
+    VideoPlayer video_player;
 };
 
 // **********************************************************************
 
 
 void proxy_test() {
-    IVideoPlayer *viewer = new VedioPlayerProxy();
+    VideoPlayerProxy video_player;
 
-    viewer->play_video();
-
-    delete viewer;
+    video_player.play_video();
 }
 
 
