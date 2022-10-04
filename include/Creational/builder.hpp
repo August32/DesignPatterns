@@ -73,6 +73,9 @@ public:
     virtual Car *get_car() = 0;
 
     virtual void delete_car() = 0;
+
+protected:
+    Car *m_car{};
 };
 
 // 具体产品建造者类 - 1
@@ -109,9 +112,6 @@ public:
         delete m_car;
         m_car = nullptr;
     }
-
-private:
-    Car *m_car;
 };
 
 // 具体产品建造者类 - 2
@@ -148,9 +148,6 @@ public:
         delete m_car;
         m_car = nullptr;
     }
-
-private:
-    Car *m_car;
 };
 
 // 具体产品建造者类 - 3
@@ -187,9 +184,6 @@ public:
         delete m_car;
         m_car = nullptr;
     }
-
-private:
-    Car *m_car;
 };
 
 // 产品指挥者类：负责执行建造过程

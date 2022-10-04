@@ -5,6 +5,7 @@
 #include "prototype.hpp"
 #include "proxy.hpp"
 #include "decorator.hpp"
+#include "bridge.hpp"
 
 using namespace std;
 
@@ -28,6 +29,9 @@ int main() {
 
     // 装饰器模式测试
 //    decorator_test();
+
+    // 桥接模式测试
+//    bridge_test();
 
     return 0;
 }

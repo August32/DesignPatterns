@@ -30,6 +30,8 @@ mutex
 thread
 -
 
+../include/Structural/bridge.hpp
+
 ../include/Structural/decorator.hpp
 
 ../include/Structural/proxy.hpp
@@ -49,4 +51,6 @@ proxy.hpp
 C:/Users/12865/Desktop/DesignPatterns/proxy.hpp
 decorator.hpp
 C:/Users/12865/Desktop/DesignPatterns/decorator.hpp
+bridge.hpp
+C:/Users/12865/Desktop/DesignPatterns/bridge.hpp
 

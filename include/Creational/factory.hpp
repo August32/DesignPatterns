@@ -24,30 +24,35 @@ public:
     virtual ~IWaferFile() = default;
 
     virtual int get_size_mm() = 0;  // 纯虚函数，使该类变为抽象类
+
+protected:
+    int m_size_mm{};
 };
 
 // 具体产品类 - 1
 class TwelveIncWaferFile : public IWaferFile {
 public:
+    TwelveIncWaferFile() {
+        m_size_mm = 300;
+    }
+
     int get_size_mm() override {
         std::cout << "12 Inc Wafer: " << m_size_mm << " mm" << std::endl;
         return m_size_mm;
     }
-
-private:
-    const int m_size_mm = 300;
 };
 
 // 具体产品类 - 2
 class EightIncWaferFile : public IWaferFile {
 public:
+    EightIncWaferFile() {
+        m_size_mm = 200;
+    }
+
     int get_size_mm() override {
         std::cout << "8 Inc Wafer: " << m_size_mm << " mm" << std::endl;
         return m_size_mm;
     }
-
-private:
-    const int m_size_mm = 200;
 };
 
 // **********************************************************************
