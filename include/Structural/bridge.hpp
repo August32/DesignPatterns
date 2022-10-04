@@ -6,6 +6,7 @@
 #define DESIGNPATTERNS_BRIGE_HPP
 
 
+// 实现者类接口 (Implementor)
 class IColor {
 public:
     virtual ~IColor() = default;
@@ -16,6 +17,7 @@ protected:
     std::string m_color;
 };
 
+// 具体实现者类 - 1 (ConcreteImplementor)
 class RedColor : public IColor {
 public:
     RedColor() {
@@ -29,6 +31,7 @@ public:
     }
 };
 
+// 具体实现者类 - 2
 class GreenColor : public IColor {
 public:
     GreenColor() {
@@ -42,6 +45,7 @@ public:
     }
 };
 
+// 具体实现者类 - 3
 class BlueColor : public IColor {
 public:
     BlueColor() {
@@ -56,8 +60,10 @@ public:
 };
 
 
+// 抽象类接口 (Abstraction)
 class IShape {
 public:
+    // “实现者对象”参数 可以在构造时传入，也可以在调用其他方法时传入
     explicit IShape(IColor *color) : m_color(color) {};
 
     virtual ~IShape() = default;
@@ -68,6 +74,7 @@ protected:
     IColor *m_color;
 };
 
+// 扩充抽象类 - 1 (RefinedAbstraction)
 class Circle : public IShape {
 public:
     explicit Circle(IColor *color) : IShape(color) {};
@@ -79,6 +86,7 @@ public:
     }
 };
 
+// 扩充抽象类 - 2
 class Square : public IShape {
 public:
     explicit Square(IColor *color) : IShape(color) {};
@@ -90,6 +98,7 @@ public:
     }
 };
 
+// 扩充抽象类 - 3
 class Triangle : public IShape {
 public:
     explicit Triangle(IColor *color) : IShape(color) {};
