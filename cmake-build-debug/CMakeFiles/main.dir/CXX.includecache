@@ -30,6 +30,8 @@ mutex
 thread
 -
 
+../include/Structural/adapter.hpp
+
 ../include/Structural/bridge.hpp
 
 ../include/Structural/decorator.hpp
@@ -53,4 +55,6 @@ decorator.hpp
 C:/Users/12865/Desktop/DesignPatterns/decorator.hpp
 bridge.hpp
 C:/Users/12865/Desktop/DesignPatterns/bridge.hpp
+adapter.hpp
+C:/Users/12865/Desktop/DesignPatterns/adapter.hpp
 

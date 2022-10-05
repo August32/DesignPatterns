@@ -6,6 +6,7 @@
 #include "proxy.hpp"
 #include "decorator.hpp"
 #include "bridge.hpp"
+#include "adapter.hpp"
 
 using namespace std;
 
@@ -32,6 +33,9 @@ int main() {
 
     // 桥接模式测试
 //    bridge_test();
+
+    // 适配器模式测试
+//    adapter_test();
 
     return 0;
 }

@@ -6,6 +6,7 @@ CMakeFiles/main.dir/main.cpp.obj
  ../include/Creational/factory.hpp
  ../include/Creational/prototype.hpp
  ../include/Creational/singleton.hpp
+ ../include/Structural/adapter.hpp
  ../include/Structural/bridge.hpp
  ../include/Structural/decorator.hpp
  ../include/Structural/proxy.hpp
