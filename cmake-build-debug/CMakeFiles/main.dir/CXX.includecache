@@ -34,27 +34,37 @@ thread
 
 ../include/Structural/bridge.hpp
 
+../include/Structural/composite.hpp
+
 ../include/Structural/decorator.hpp
+
+../include/Structural/flyweight.hpp
+map
+-
 
 ../include/Structural/proxy.hpp
 
-C:/Users/12865/Desktop/DesignPatterns/main.cpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/main.cpp
 iostream
 -
 singleton.hpp
-C:/Users/12865/Desktop/DesignPatterns/singleton.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/singleton.hpp
 factory.hpp
-C:/Users/12865/Desktop/DesignPatterns/factory.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/factory.hpp
 builder.hpp
-C:/Users/12865/Desktop/DesignPatterns/builder.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/builder.hpp
 prototype.hpp
-C:/Users/12865/Desktop/DesignPatterns/prototype.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/prototype.hpp
 proxy.hpp
-C:/Users/12865/Desktop/DesignPatterns/proxy.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/proxy.hpp
 decorator.hpp
-C:/Users/12865/Desktop/DesignPatterns/decorator.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/decorator.hpp
 bridge.hpp
-C:/Users/12865/Desktop/DesignPatterns/bridge.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/bridge.hpp
 adapter.hpp
-C:/Users/12865/Desktop/DesignPatterns/adapter.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/adapter.hpp
+composite.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/composite.hpp
+flyweight.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/flyweight.hpp
 

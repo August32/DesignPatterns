@@ -8,6 +8,8 @@ CMakeFiles/main.dir/main.cpp.obj
  ../include/Creational/singleton.hpp
  ../include/Structural/adapter.hpp
  ../include/Structural/bridge.hpp
+ ../include/Structural/composite.hpp
  ../include/Structural/decorator.hpp
+ ../include/Structural/flyweight.hpp
  ../include/Structural/proxy.hpp
- C:/Users/12865/Desktop/DesignPatterns/main.cpp
+ C:/Users/12865/Desktop/Projects/DesignPatterns/main.cpp

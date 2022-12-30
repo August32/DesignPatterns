@@ -7,7 +7,9 @@ CMakeFiles/main.dir/main.cpp.obj: ../include/Creational/prototype.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Creational/singleton.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/adapter.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/bridge.hpp
+CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/composite.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/decorator.hpp
+CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/flyweight.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Structural/proxy.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../main.cpp
 

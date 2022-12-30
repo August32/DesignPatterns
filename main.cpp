@@ -7,6 +7,9 @@
 #include "decorator.hpp"
 #include "bridge.hpp"
 #include "adapter.hpp"
+#include "composite.hpp"
+#include "flyweight.hpp"
+
 
 using namespace std;
 
