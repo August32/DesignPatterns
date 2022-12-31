@@ -9,6 +9,7 @@
 #include "adapter.hpp"
 #include "composite.hpp"
 #include "flyweight.hpp"
+#include "observer.hpp"
 
 
 using namespace std;
@@ -39,6 +40,9 @@ int main() {
 
     // 适配器模式测试
 //    adapter_test();
+
+    // 观察者模式测试
+//    observer_test();
 
     return 0;
 }
