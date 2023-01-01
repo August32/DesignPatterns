@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../include/Behavior/observer.hpp
+iostream
+-
+vector
+-
+algorithm
+-
+
+../include/Behavior/template.hpp
+iostream
+-
+
 ../include/Creational/builder.hpp
 iostream
 -
@@ -67,4 +79,8 @@ composite.hpp
 C:/Users/12865/Desktop/Projects/DesignPatterns/composite.hpp
 flyweight.hpp
 C:/Users/12865/Desktop/Projects/DesignPatterns/flyweight.hpp
+observer.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/observer.hpp
+template.hpp
+C:/Users/12865/Desktop/Projects/DesignPatterns/template.hpp
 

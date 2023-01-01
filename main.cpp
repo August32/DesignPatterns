@@ -10,6 +10,7 @@
 #include "composite.hpp"
 #include "flyweight.hpp"
 #include "observer.hpp"
+#include "template.hpp"
 
 
 using namespace std;
@@ -43,6 +44,9 @@ int main() {
 
     // 观察者模式测试
 //    observer_test();
+
+    // 模板模式测试
+//    template_method_test();
 
     return 0;
 }
