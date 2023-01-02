@@ -9,10 +9,10 @@
 #include <iostream>
 
 
-// 抽象类 AbstractClass，表示模板模式的抽象类
-class AbstractClass {
+// 抽象类 TM_AbstractClass，表示模板模式的抽象类
+class TMAbstractClass {
 public:
-    virtual ~AbstractClass() = default;
+    virtual ~TMAbstractClass() = default;
 
     void template_method() {
         // 不变的部分
@@ -30,27 +30,27 @@ protected:
     virtual void primitive_operation_2() = 0;
 };
 
-// 具体类 ConcreteClassA，表示模板模式的具体子类
-class ConcreteClassA : public AbstractClass {
+// 具体类 TM_ConcreteClassA，表示模板模式的具体子类
+class TMConcreteClassA : public TMAbstractClass {
 protected:
     void primitive_operation_1() override {
-        std::cout << "ConcreteClassA: PrimitiveOperation1" << std::endl;
+        std::cout << "TMConcreteClassA: PrimitiveOperation1" << std::endl;
     }
 
     void primitive_operation_2() override {
-        std::cout << "ConcreteClassA: PrimitiveOperation2" << std::endl;
+        std::cout << "TMConcreteClassA: PrimitiveOperation2" << std::endl;
     }
 };
 
-// 具体类 ConcreteClassB，表示模板模式的具体子类
-class ConcreteClassB : public AbstractClass {
+// 具体类 TM_ConcreteClassB，表示模板模式的具体子类
+class TMConcreteClassB : public TMAbstractClass {
 protected:
     void primitive_operation_1() override {
-        std::cout << "ConcreteClassB: PrimitiveOperation1" << std::endl;
+        std::cout << "TMConcreteClassB: PrimitiveOperation1" << std::endl;
     }
 
     void primitive_operation_2() override {
-        std::cout << "ConcreteClassB: PrimitiveOperation2" << std::endl;
+        std::cout << "TMConcreteClassB: PrimitiveOperation2" << std::endl;
     }
 };
 
@@ -58,15 +58,15 @@ protected:
 
 
 void template_method_test() {
-    // 使用具体子类 ConcreteClassA
-    AbstractClass *class1 = new ConcreteClassA;
+    // 使用具体子类 TMConcreteClassA
+    TMAbstractClass *class1 = new TMConcreteClassA;
     class1->template_method();
     delete class1;
 
     std::cout << std::endl;
 
-    // 使用具体子类 ConcreteClassB
-    AbstractClass *class2 = new ConcreteClassB;
+    // 使用具体子类 TMConcreteClassB
+    TMAbstractClass *class2 = new TMConcreteClassB;
     class2->template_method();
     delete class2;
 }

@@ -11,6 +11,7 @@
 #include "flyweight.hpp"
 #include "observer.hpp"
 #include "template.hpp"
+#include "strategy.hpp"
 
 
 using namespace std;
@@ -30,6 +31,8 @@ int main() {
     // 原型模式测试
 //    prototype_test();
 
+// **********************************************************************
+
     // 代理模式测试
 //    proxy_test();
 
@@ -42,11 +45,16 @@ int main() {
     // 适配器模式测试
 //    adapter_test();
 
+// **********************************************************************
+
     // 观察者模式测试
 //    observer_test();
 
     // 模板模式测试
 //    template_method_test();
+
+    // 策略模式测试
+//    strategy_test();
 
     return 0;
 }
