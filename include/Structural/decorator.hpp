@@ -90,7 +90,7 @@ void decorator_test() {
     // 第一层装饰器
     IImageViewer *imgae_viewer_decorator1 = new ImageViewerDecorator1(image_viewer_origin);
 
-    // 第二次装饰器
+    // 第二层装饰器
     IImageViewer *imgae_viewer_decorator2 = new ImageViewerDecorator2(imgae_viewer_decorator1);
 
     imgae_viewer_decorator2->show_image();

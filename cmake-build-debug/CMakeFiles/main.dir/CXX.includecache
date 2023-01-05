@@ -20,6 +20,10 @@ iostream
 vector
 -
 
+../include/Behavior/state.hpp
+iostream
+-
+
 ../include/Behavior/strategy.hpp
 iostream
 -
@@ -66,35 +70,37 @@ map
 
 ../include/Structural/proxy.hpp
 
-D:/001_Project/002/design-patterns/main.cpp
+D:/001_Project/design-patterns/main.cpp
 iostream
 -
 singleton.hpp
-D:/001_Project/002/design-patterns/singleton.hpp
+D:/001_Project/design-patterns/singleton.hpp
 factory.hpp
-D:/001_Project/002/design-patterns/factory.hpp
+D:/001_Project/design-patterns/factory.hpp
 builder.hpp
-D:/001_Project/002/design-patterns/builder.hpp
+D:/001_Project/design-patterns/builder.hpp
 prototype.hpp
-D:/001_Project/002/design-patterns/prototype.hpp
+D:/001_Project/design-patterns/prototype.hpp
 proxy.hpp
-D:/001_Project/002/design-patterns/proxy.hpp
+D:/001_Project/design-patterns/proxy.hpp
 decorator.hpp
-D:/001_Project/002/design-patterns/decorator.hpp
+D:/001_Project/design-patterns/decorator.hpp
 bridge.hpp
-D:/001_Project/002/design-patterns/bridge.hpp
+D:/001_Project/design-patterns/bridge.hpp
 adapter.hpp
-D:/001_Project/002/design-patterns/adapter.hpp
+D:/001_Project/design-patterns/adapter.hpp
 composite.hpp
-D:/001_Project/002/design-patterns/composite.hpp
+D:/001_Project/design-patterns/composite.hpp
 flyweight.hpp
-D:/001_Project/002/design-patterns/flyweight.hpp
+D:/001_Project/design-patterns/flyweight.hpp
 observer.hpp
-D:/001_Project/002/design-patterns/observer.hpp
+D:/001_Project/design-patterns/observer.hpp
 template.hpp
-D:/001_Project/002/design-patterns/template.hpp
+D:/001_Project/design-patterns/template.hpp
 strategy.hpp
-D:/001_Project/002/design-patterns/strategy.hpp
+D:/001_Project/design-patterns/strategy.hpp
 responsibility.hpp
-D:/001_Project/002/design-patterns/responsibility.hpp
+D:/001_Project/design-patterns/responsibility.hpp
+state.hpp
+D:/001_Project/design-patterns/state.hpp
 

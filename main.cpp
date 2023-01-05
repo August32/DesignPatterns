@@ -13,6 +13,7 @@
 #include "template.hpp"
 #include "strategy.hpp"
 #include "responsibility.hpp"
+#include "state.hpp"
 
 
 using namespace std;
@@ -59,6 +60,9 @@ int main() {
 
     // 职责链模式测试
 //    chain_of_responsibility_test();
+
+    // 状态模式测试
+//    state_test();
 
     return 0;
 }
