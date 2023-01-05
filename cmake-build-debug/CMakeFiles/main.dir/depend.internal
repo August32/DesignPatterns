@@ -3,6 +3,7 @@
 
 CMakeFiles/main.dir/main.cpp.obj
  ../include/Behavior/observer.hpp
+ ../include/Behavior/responsibility.hpp
  ../include/Behavior/strategy.hpp
  ../include/Behavior/template.hpp
  ../include/Creational/builder.hpp
@@ -15,4 +16,4 @@ CMakeFiles/main.dir/main.cpp.obj
  ../include/Structural/decorator.hpp
  ../include/Structural/flyweight.hpp
  ../include/Structural/proxy.hpp
- C:/Users/12865/Desktop/Projects/DesignPatterns/main.cpp
+ D:/001_Project/002/design-patterns/main.cpp

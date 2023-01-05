@@ -14,6 +14,12 @@ vector
 algorithm
 -
 
+../include/Behavior/responsibility.hpp
+iostream
+-
+vector
+-
+
 ../include/Behavior/strategy.hpp
 iostream
 -
@@ -60,33 +66,35 @@ map
 
 ../include/Structural/proxy.hpp
 
-C:/Users/12865/Desktop/Projects/DesignPatterns/main.cpp
+D:/001_Project/002/design-patterns/main.cpp
 iostream
 -
 singleton.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/singleton.hpp
+D:/001_Project/002/design-patterns/singleton.hpp
 factory.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/factory.hpp
+D:/001_Project/002/design-patterns/factory.hpp
 builder.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/builder.hpp
+D:/001_Project/002/design-patterns/builder.hpp
 prototype.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/prototype.hpp
+D:/001_Project/002/design-patterns/prototype.hpp
 proxy.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/proxy.hpp
+D:/001_Project/002/design-patterns/proxy.hpp
 decorator.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/decorator.hpp
+D:/001_Project/002/design-patterns/decorator.hpp
 bridge.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/bridge.hpp
+D:/001_Project/002/design-patterns/bridge.hpp
 adapter.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/adapter.hpp
+D:/001_Project/002/design-patterns/adapter.hpp
 composite.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/composite.hpp
+D:/001_Project/002/design-patterns/composite.hpp
 flyweight.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/flyweight.hpp
+D:/001_Project/002/design-patterns/flyweight.hpp
 observer.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/observer.hpp
+D:/001_Project/002/design-patterns/observer.hpp
 template.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/template.hpp
+D:/001_Project/002/design-patterns/template.hpp
 strategy.hpp
-C:/Users/12865/Desktop/Projects/DesignPatterns/strategy.hpp
+D:/001_Project/002/design-patterns/strategy.hpp
+responsibility.hpp
+D:/001_Project/002/design-patterns/responsibility.hpp
 

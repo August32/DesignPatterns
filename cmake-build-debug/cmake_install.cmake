@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/12865/Desktop/Projects/DesignPatterns
+# Install script for directory: D:/001_Project/002/design-patterns
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/12865/x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/DELL/x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0/mingw64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/12865/Desktop/Projects/DesignPatterns/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/001_Project/002/design-patterns/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

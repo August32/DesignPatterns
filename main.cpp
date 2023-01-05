@@ -12,6 +12,7 @@
 #include "observer.hpp"
 #include "template.hpp"
 #include "strategy.hpp"
+#include "responsibility.hpp"
 
 
 using namespace std;
@@ -55,6 +56,9 @@ int main() {
 
     // 策略模式测试
 //    strategy_test();
+
+    // 职责链模式测试
+//    chain_of_responsibility_test();
 
     return 0;
 }
