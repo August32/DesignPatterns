@@ -14,6 +14,7 @@
 #include "strategy.hpp"
 #include "responsibility.hpp"
 #include "state.hpp"
+#include "iterator.hpp"
 
 
 using namespace std;
@@ -63,6 +64,9 @@ int main() {
 
     // 状态模式测试
 //    state_test();
+
+    // 迭代器模式测试
+//    iterator_test();
 
     return 0;
 }

@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/Behavior/iterator.hpp
+iostream
+-
+vector
+-
+
 ../include/Behavior/observer.hpp
 iostream
 -
@@ -103,4 +109,6 @@ responsibility.hpp
 D:/001_Project/design-patterns/responsibility.hpp
 state.hpp
 D:/001_Project/design-patterns/state.hpp
+iterator.hpp
+D:/001_Project/design-patterns/iterator.hpp
 
