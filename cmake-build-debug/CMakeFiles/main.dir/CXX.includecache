@@ -38,6 +38,12 @@ iostream
 iostream
 -
 
+../include/Behavior/visitor.hpp
+iostream
+-
+vector
+-
+
 ../include/Creational/builder.hpp
 iostream
 -
@@ -111,4 +117,6 @@ state.hpp
 D:/001_Project/design-patterns/state.hpp
 iterator.hpp
 D:/001_Project/design-patterns/iterator.hpp
+visitor.hpp
+D:/001_Project/design-patterns/visitor.hpp
 

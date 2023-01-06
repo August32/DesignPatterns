@@ -15,6 +15,7 @@
 #include "responsibility.hpp"
 #include "state.hpp"
 #include "iterator.hpp"
+#include "visitor.hpp"
 
 
 using namespace std;
@@ -67,6 +68,9 @@ int main() {
 
     // 迭代器模式测试
 //    iterator_test();
+
+    // 访问者模式测试
+//    visitor_test();
 
     return 0;
 }

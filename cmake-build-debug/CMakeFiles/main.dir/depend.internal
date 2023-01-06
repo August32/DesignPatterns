@@ -8,6 +8,7 @@ CMakeFiles/main.dir/main.cpp.obj
  ../include/Behavior/state.hpp
  ../include/Behavior/strategy.hpp
  ../include/Behavior/template.hpp
+ ../include/Behavior/visitor.hpp
  ../include/Creational/builder.hpp
  ../include/Creational/factory.hpp
  ../include/Creational/prototype.hpp

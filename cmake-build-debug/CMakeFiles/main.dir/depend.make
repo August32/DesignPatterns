@@ -7,6 +7,7 @@ CMakeFiles/main.dir/main.cpp.obj: ../include/Behavior/responsibility.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Behavior/state.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Behavior/strategy.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Behavior/template.hpp
+CMakeFiles/main.dir/main.cpp.obj: ../include/Behavior/visitor.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Creational/builder.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Creational/factory.hpp
 CMakeFiles/main.dir/main.cpp.obj: ../include/Creational/prototype.hpp
