@@ -16,8 +16,8 @@ class WordFile;
 
 class PPTFile;
 
-// ·ÃÎÊÕß³éÏóÀà
-// ÎÄ¼ş¶ÔÏóÍ¨¹ıÍ³Ò»µÄ½Ó¿ÚÈ¥Ö´ĞĞ²»Í¬µÄ²Ù×÷£¬²¢Í¨¹ıÖØÔØµÄ·½Ê½ÊµÏÖ¶àÌ¬
+// è®¿é—®è€…æŠ½è±¡ç±»
+// æ–‡ä»¶å¯¹è±¡é€šè¿‡ç»Ÿä¸€çš„æ¥å£å»æ‰§è¡Œä¸åŒçš„æ“ä½œï¼Œå¹¶é€šè¿‡é‡è½½çš„æ–¹å¼å®ç°å¤šæ€
 class Visitor {
 public:
     virtual ~Visitor() = default;
@@ -29,7 +29,7 @@ public:
     virtual void visit(PPTFile &ppt_file) = 0;
 };
 
-// ÎÄ¼ş³éÏóÀà
+// æ–‡ä»¶æŠ½è±¡ç±»
 class ResourceFile {
 public:
     explicit ResourceFile(std::string filepath)
@@ -44,7 +44,7 @@ private:
 
 };
 
-// ÎÄ¼ş¾ßÌåÀà - Pdf
+// æ–‡ä»¶å…·ä½“ç±» - Pdf
 class PdfFile : public ResourceFile {
 public:
     explicit PdfFile(std::string filepath)
@@ -55,7 +55,7 @@ public:
     }
 };
 
-// ÎÄ¼ş¾ßÌåÀà - Word
+// æ–‡ä»¶å…·ä½“ç±» - Word
 class WordFile : public ResourceFile {
 public:
     explicit WordFile(std::string filepath)
@@ -66,7 +66,7 @@ public:
     }
 };
 
-// ÎÄ¼ş¾ßÌåÀà - PPT
+// æ–‡ä»¶å…·ä½“ç±» - PPT
 class PPTFile : public ResourceFile {
 public:
     explicit PPTFile(std::string filepath)
@@ -77,7 +77,7 @@ public:
     }
 };
 
-// ¾ßÌå²Ù×÷Àà - Extractor
+// å…·ä½“æ“ä½œç±» - Extractor
 class Extractor : public Visitor {
 public:
     void visit(PdfFile &pdf_file) override {
@@ -93,7 +93,7 @@ public:
     }
 };
 
-// ¾ßÌå²Ù×÷Àà - Compressor
+// å…·ä½“æ“ä½œç±» - Compressor
 class Compressor : public Visitor {
 public:
     void visit(PdfFile &pdf_file) override {
@@ -121,12 +121,12 @@ void visitor_test() {
     ResourceFile *ppt_file = new PPTFile("c.ppt");
     std::vector<ResourceFile *> files{pdf_file, word_file, ppt_file};
 
-    // Ö´ĞĞ extractor ²Ù×÷
+    // æ‰§è¡Œ extractor æ“ä½œ
     for (const auto &i : files) {
         i->accept(extractor);
     }
 
-    // Ö´ĞĞ compressor ²Ù×÷
+    // æ‰§è¡Œ compressor æ“ä½œ
     for (const auto &i : files) {
         i->accept(compressor);
     }

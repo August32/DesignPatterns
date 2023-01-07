@@ -10,11 +10,11 @@
 #include <vector>
 
 
-template<class T>
+template<typename T>
 class MyVector;
 
-// µü´úÆ÷³éÏóÀà
-template<class T>
+// è¿­ä»£å™¨æŠ½è±¡ç±»
+template<typename T>
 class AbstractIterator {
 public:
     virtual ~AbstractIterator() = default;
@@ -26,8 +26,8 @@ public:
     virtual T current_item() = 0;
 };
 
-// µü´úÆ÷¾ßÌåÀà
-template<class T>
+// è¿­ä»£å™¨å…·ä½“ç±»
+template<typename T>
 class VectorIterator : AbstractIterator<T> {
 public:
     explicit VectorIterator(MyVector<T> &vector) {
@@ -55,8 +55,8 @@ public:
     int m_cursor;
 };
 
-// ÈİÆ÷Àà
-template<class T>
+// å®¹å™¨ç±»
+template<typename T>
 class MyVector : public std::vector<T> {
 public:
     VectorIterator<T> my_iterator() {
@@ -74,10 +74,10 @@ void iterator_test() {
     v.emplace_back(39);
     v.emplace_back(84);
 
-    // ÊµÀı»¯µü´úÆ÷¶ÔÏó
+    // å®ä¾‹åŒ–è¿­ä»£å™¨å¯¹è±¡
     VectorIterator<int> vi = v.my_iterator();
 
-    // µü´úÆ÷±éÀú
+    // è¿­ä»£å™¨éå†
     while (vi.has_next()) {
         std::cout << vi.current_item() << std::endl;
         vi.next();

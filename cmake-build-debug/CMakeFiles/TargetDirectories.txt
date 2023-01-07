@@ -1,3 +1,0 @@
-D:/001_Project/design-patterns/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/001_Project/design-patterns/cmake-build-debug/CMakeFiles/main.dir
-D:/001_Project/design-patterns/cmake-build-debug/CMakeFiles/rebuild_cache.dir

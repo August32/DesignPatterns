@@ -10,7 +10,7 @@
 #include <vector>
 
 
-// ¶¨Òå³éÏóÀà£¬±íÊ¾´¦ÀíÇëÇóµÄ¶ÔÏó
+// å®šä¹‰æŠ½è±¡ç±»ï¼Œè¡¨ç¤ºå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 class IHandler {
 public:
     virtual ~IHandler() = default;
@@ -18,7 +18,7 @@ public:
     virtual bool handle(int request) = 0;
 };
 
-// ¾ßÌåµÄ´¦Àí¶ÔÏó1£¬ÄÜ¹»´¦Àí 1~10 µÄÇëÇó
+// å…·ä½“çš„å¤„ç†å¯¹è±¡1ï¼Œèƒ½å¤Ÿå¤„ç† 1~10 çš„è¯·æ±‚
 class ConcreteHandler1 : public IHandler {
 public:
     bool handle(int request) override {
@@ -33,7 +33,7 @@ public:
     };
 };
 
-// ¾ßÌåµÄ´¦Àí¶ÔÏó2£¬ÄÜ¹»´¦Àí 11~20 µÄÇëÇó
+// å…·ä½“çš„å¤„ç†å¯¹è±¡2ï¼Œèƒ½å¤Ÿå¤„ç† 11~20 çš„è¯·æ±‚
 class ConcreteHandler2 : public IHandler {
 public:
     bool handle(int request) override {
@@ -48,7 +48,7 @@ public:
     };
 };
 
-// ¾ßÌåµÄ´¦Àí¶ÔÏó3£¬ÄÜ¹»´¦Àí 21~30 µÄÇëÇó
+// å…·ä½“çš„å¤„ç†å¯¹è±¡3ï¼Œèƒ½å¤Ÿå¤„ç† 21~30 çš„è¯·æ±‚
 class ConcreteHandler3 : public IHandler {
 public:
     bool handle(int request) override {
@@ -63,7 +63,7 @@ public:
     };
 };
 
-// Ö°ÔğÁ´
+// èŒè´£é“¾
 class HandlerChain {
 public:
     HandlerChain() = default;
@@ -97,18 +97,18 @@ private:
 
 
 void chain_of_responsibility_test() {
-    // ´´½¨Ö°ÔğÁ´
+    // åˆ›å»ºèŒè´£é“¾
     HandlerChain handler_chain;
     IHandler *h1 = new ConcreteHandler1();
     IHandler *h2 = new ConcreteHandler2();
     IHandler *h3 = new ConcreteHandler3();
 
-    // Ìí¼Ó¾ßÌåµÄ´¦Àí¶ÔÏó
+    // æ·»åŠ å…·ä½“çš„å¤„ç†å¯¹è±¡
     handler_chain.add_handle(h1);
     handler_chain.add_handle(h2);
     handler_chain.add_handle(h3);
 
-    // ·¢ËÍÇëÇó
+    // å‘é€è¯·æ±‚
     handler_chain.handle(15);
     handler_chain.handle(25);
     handler_chain.handle(35);

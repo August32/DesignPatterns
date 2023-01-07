@@ -18,7 +18,7 @@ enum MarioState {
 
 class MarioStateMachine;
 
-// ÂíÀï°Â³éÏóÀà
+// é©¬é‡Œå¥¥æŠ½è±¡ç±»
 class IMario {
 public:
     virtual ~IMario() = default;
@@ -34,7 +34,7 @@ public:
     virtual void meet_monster(MarioStateMachine &state_machine) = 0;
 };
 
-// ÂíÀï°Â¾ßÌåÀà - SMALL
+// é©¬é‡Œå¥¥å…·ä½“ç±» - SMALL
 class SmallMario : public IMario {
 private:
     SmallMario() = default;
@@ -54,13 +54,13 @@ public:
 
 public:
     static SmallMario &get_instance() {
-        static SmallMario instance = SmallMario();  // ¾Ö²¿¾²Ì¬±äÁ¿£¬×¢ÒâÉúÃüÖÜÆÚ
+        static SmallMario instance = SmallMario();  // å±€éƒ¨é™æ€å˜é‡ï¼Œæ³¨æ„ç”Ÿå‘½å‘¨æœŸ
 
         return instance;
     }
 };
 
-// ÂíÀï°Â¾ßÌåÀà - SUPER
+// é©¬é‡Œå¥¥å…·ä½“ç±» - SUPER
 class SuperMario : public IMario {
 private:
     SuperMario() = default;
@@ -80,13 +80,13 @@ public:
 
 public:
     static SuperMario &get_instance() {
-        static SuperMario instance = SuperMario();  // ¾Ö²¿¾²Ì¬±äÁ¿£¬×¢ÒâÉúÃüÖÜÆÚ
+        static SuperMario instance = SuperMario();  // å±€éƒ¨é™æ€å˜é‡ï¼Œæ³¨æ„ç”Ÿå‘½å‘¨æœŸ
 
         return instance;
     }
 };
 
-// ÂíÀï°Â¾ßÌåÀà - CAPE
+// é©¬é‡Œå¥¥å…·ä½“ç±» - CAPE
 class CapeMario : public IMario {
 private:
     CapeMario() = default;
@@ -106,13 +106,13 @@ public:
 
 public:
     static CapeMario &get_instance() {
-        static CapeMario instance = CapeMario();  // ¾Ö²¿¾²Ì¬±äÁ¿£¬×¢ÒâÉúÃüÖÜÆÚ
+        static CapeMario instance = CapeMario();  // å±€éƒ¨é™æ€å˜é‡ï¼Œæ³¨æ„ç”Ÿå‘½å‘¨æœŸ
 
         return instance;
     }
 };
 
-// ÂíÀï°Â¾ßÌåÀà - FIRE
+// é©¬é‡Œå¥¥å…·ä½“ç±» - FIRE
 class FireMario : public IMario {
 private:
     FireMario() = default;
@@ -132,13 +132,13 @@ public:
 
 public:
     static FireMario &get_instance() {
-        static FireMario instance = FireMario();  // ¾Ö²¿¾²Ì¬±äÁ¿£¬×¢ÒâÉúÃüÖÜÆÚ
+        static FireMario instance = FireMario();  // å±€éƒ¨é™æ€å˜é‡ï¼Œæ³¨æ„ç”Ÿå‘½å‘¨æœŸ
 
         return instance;
     }
 };
 
-// ÂíÀï°Â×´Ì¬»ú
+// é©¬é‡Œå¥¥çŠ¶æ€æœº
 class MarioStateMachine {
 public:
     MarioStateMachine() {
@@ -190,7 +190,7 @@ private:
 // **********************************************************************
 
 
-// SmallMario º¯ÊýÊµÏÖ
+// SmallMario å‡½æ•°å®žçŽ°
 void SmallMario::obtain_mush_room(MarioStateMachine &state_machine) {
     state_machine.set_current_state(&SuperMario::get_instance());
     state_machine.set_score(state_machine.get_score() + 100);
@@ -211,7 +211,7 @@ void SmallMario::meet_monster(MarioStateMachine &state_machine) {
     state_machine.set_score(0);
 }
 
-// SuperMario º¯ÊýÊµÏÖ
+// SuperMario å‡½æ•°å®žçŽ°
 void SuperMario::obtain_mush_room(MarioStateMachine &state_machine) {
     state_machine.set_current_state(&SuperMario::get_instance());
     state_machine.set_score(state_machine.get_score() + 100);
@@ -232,7 +232,7 @@ void SuperMario::meet_monster(MarioStateMachine &state_machine) {
     state_machine.set_score(0);
 }
 
-// CapeMario º¯ÊýÊµÏÖ
+// CapeMario å‡½æ•°å®žçŽ°
 void CapeMario::obtain_mush_room(MarioStateMachine &state_machine) {
     state_machine.set_current_state(&SuperMario::get_instance());
     state_machine.set_score(state_machine.get_score() + 100);
@@ -253,7 +253,7 @@ void CapeMario::meet_monster(MarioStateMachine &state_machine) {
     state_machine.set_score(0);
 }
 
-// FireMario º¯ÊýÊµÏÖ
+// FireMario å‡½æ•°å®žçŽ°
 void FireMario::obtain_mush_room(MarioStateMachine &state_machine) {
     state_machine.set_current_state(&SuperMario::get_instance());
     state_machine.set_score(state_machine.get_score() + 100);

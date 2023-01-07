@@ -229,7 +229,7 @@ public:
 // 4.模板工厂
 
 // 抽象模板工厂类
-template <class AbstractProduct_t>
+template <typename AbstractProduct_t>
 class AbstractFactory {
 public:
     virtual ~AbstractFactory() = default;
@@ -238,7 +238,7 @@ public:
 };
 
 // 具体模板工厂类
-template <class AbstractProduct_t, class ConcreteProduct_t>
+template <typename AbstractProduct_t, typename ConcreteProduct_t>
 class ConcreteFactory : public AbstractFactory<AbstractProduct_t> {
 public:
     AbstractProduct_t *create_product() override {
