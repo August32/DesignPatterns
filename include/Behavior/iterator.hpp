@@ -5,7 +5,6 @@
 #ifndef DESIGNPATTERNS_ITERATOR_HPP
 #define DESIGNPATTERNS_ITERATOR_HPP
 
-
 #include <iostream>
 #include <vector>
 
@@ -59,6 +58,8 @@ public:
 template<typename T>
 class MyVector : public std::vector<T> {
 public:
+    ~MyVector() = default;
+
     VectorIterator<T> my_iterator() {
         return VectorIterator<T>(*this);
     }

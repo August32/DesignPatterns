@@ -5,9 +5,11 @@
 #ifndef DESIGNPATTERNS_RESPONSIBILITY_HPP
 #define DESIGNPATTERNS_RESPONSIBILITY_HPP
 
-
 #include <iostream>
 #include <vector>
+#include <memory>
+
+#define RES_SMARTPTR 1
 
 
 // 定义抽象类，表示处理请求的对象
@@ -75,9 +77,20 @@ public:
     HandlerChain &operator=(const HandlerChain &) = delete;
 
 public:
+
+#if RES_SMARTPTR
+
+    void add_handle(const std::shared_ptr<IHandler>& handler) {
+        m_handlers.push_back(handler);
+    }
+
+#else
+
     void add_handle(IHandler *handler) {
         m_handlers.emplace_back(handler);
     }
+
+#endif
 
     void handle(int request) {
         for (const auto &i : m_handlers) {
@@ -90,7 +103,17 @@ public:
     }
 
 private:
+
+#if RES_SMARTPTR
+
+    std::vector<std::shared_ptr<IHandler>> m_handlers;
+
+#else
+
     std::vector<IHandler *> m_handlers;
+
+#endif
+
 };
 
 // **********************************************************************
@@ -99,9 +122,20 @@ private:
 void chain_of_responsibility_test() {
     // 创建职责链
     HandlerChain handler_chain;
+
+# if RES_SMARTPTR
+
+    auto h1 = std::make_shared<ConcreteHandler1>();
+    auto h2 = std::make_shared<ConcreteHandler2>();
+    auto h3 = std::make_shared<ConcreteHandler3>();
+
+#else
+
     IHandler *h1 = new ConcreteHandler1();
     IHandler *h2 = new ConcreteHandler2();
     IHandler *h3 = new ConcreteHandler3();
+
+#endif
 
     // 添加具体的处理对象
     handler_chain.add_handle(h1);
@@ -113,9 +147,14 @@ void chain_of_responsibility_test() {
     handler_chain.handle(25);
     handler_chain.handle(35);
 
+#if !RES_SMARTPTR
+
     delete h1;
     delete h2;
     delete h3;
+
+#endif
+
 }
 
 

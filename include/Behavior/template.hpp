@@ -5,7 +5,6 @@
 #ifndef DESIGNPATTERNS_TEMPLATE_METHOD_HPP
 #define DESIGNPATTERNS_TEMPLATE_METHOD_HPP
 
-
 #include <iostream>
 
 

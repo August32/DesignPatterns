@@ -5,7 +5,6 @@
 #ifndef DESIGNPATTERNS_OBSERVER_HPP
 #define DESIGNPATTERNS_OBSERVER_HPP
 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>

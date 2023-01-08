@@ -5,7 +5,6 @@
 #ifndef DESIGNPATTERNS_STATE_HPP
 #define DESIGNPATTERNS_STATE_HPP
 
-
 #include <iostream>
 
 
@@ -38,12 +37,12 @@ public:
 class SmallMario : public IMario {
 private:
     SmallMario() = default;
-    
+
 public:
     MarioState get_name() override {
         return MarioState::SMALL;
     }
-    
+
     void obtain_mush_room(MarioStateMachine &state_machine) override;
 
     void obtain_cape(MarioStateMachine &state_machine) override;
@@ -278,7 +277,8 @@ void FireMario::meet_monster(MarioStateMachine &state_machine) {
 
 
 void output_state(MarioStateMachine &mario_state_machine) {
-    std::cout << "state: " << mario_state_machine.get_current_state() << ", " << "score: " << mario_state_machine.get_score() << std::endl;
+    std::cout << "state: " << mario_state_machine.get_current_state() << ", "
+              << "score: " << mario_state_machine.get_score() << std::endl;
 }
 
 void state_test() {

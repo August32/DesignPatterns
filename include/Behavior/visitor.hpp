@@ -5,9 +5,9 @@
 #ifndef DESIGNPATTERNS_VISITOR_HPP
 #define DESIGNPATTERNS_VISITOR_HPP
 
-
 #include <iostream>
 #include <vector>
+#include <memory>
 
 
 class PdfFile;
@@ -116,6 +116,8 @@ void visitor_test() {
     Extractor extractor;
     Compressor compressor;
 
+#if 0  // 指针
+
     ResourceFile *pdf_file = new PdfFile("a.pdf");
     ResourceFile *word_file = new WordFile("b.word");
     ResourceFile *ppt_file = new PPTFile("c.ppt");
@@ -134,6 +136,26 @@ void visitor_test() {
     delete pdf_file;
     delete word_file;
     delete ppt_file;
+
+#else  // 智能指针
+
+    auto pdf_file = std::make_shared<PdfFile>("a.pdf");
+    auto word_file = std::make_shared<WordFile>("b.word");
+    auto ppt_file = std::make_shared<PPTFile>("c.ppt");
+    std::vector<std::shared_ptr<ResourceFile>> files{pdf_file, word_file, ppt_file};
+
+    // 执行 extractor 操作
+    for (const auto &i : files) {
+        i->accept(extractor);
+    }
+
+    // 执行 compressor 操作
+    for (const auto &i : files) {
+        i->accept(compressor);
+    }
+
+#endif
+
 }
 
 

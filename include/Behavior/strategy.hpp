@@ -5,7 +5,6 @@
 #ifndef DESIGNPATTERNS_STRATEGY_HPP
 #define DESIGNPATTERNS_STRATEGY_HPP
 
-
 #include <iostream>
 
 
