@@ -16,6 +16,7 @@
 #include "state.hpp"
 #include "iterator.hpp"
 #include "visitor.hpp"
+#include "memento.hpp"
 
 
 using namespace std;
@@ -71,6 +72,9 @@ int main() {
 
     // 访问者模式测试
 //    visitor_test();
+
+    // 备忘录模式测试
+//    snapshot_text();
 
     return 0;
 }
