@@ -1,22 +1,5 @@
 #include <iostream>
-#include "singleton.hpp"
-#include "factory.hpp"
-#include "builder.hpp"
-#include "prototype.hpp"
-#include "proxy.hpp"
-#include "decorator.hpp"
-#include "bridge.hpp"
-#include "adapter.hpp"
-#include "composite.hpp"
-#include "flyweight.hpp"
-#include "observer.hpp"
-#include "template.hpp"
-#include "strategy.hpp"
-#include "responsibility.hpp"
-#include "state.hpp"
-#include "iterator.hpp"
-#include "visitor.hpp"
-#include "memento.hpp"
+#include "head.h"
 
 
 using namespace std;
@@ -75,6 +58,15 @@ int main() {
 
     // 备忘录模式测试
 //    snapshot_text();
+
+    // 命令模式测试
+//    command_test();
+
+    // 解释器模式测试
+//    interpreter_test();
+
+    // 中介模式测试
+//    mediator_test();
 
     return 0;
 }
