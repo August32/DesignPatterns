@@ -2,6 +2,13 @@
 // Created by 12865 on 2022/10/4.
 //
 
+/*
+ * Decouple an abstraction from its implementation
+ * so that the two can vary independently.
+ *
+ * 将抽象和实现解耦，使它们可以独立变化。
+ */
+
 #ifndef DESIGNPATTERNS_BRIGE_HPP
 #define DESIGNPATTERNS_BRIGE_HPP
 

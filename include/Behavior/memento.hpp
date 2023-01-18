@@ -2,6 +2,14 @@
 // Created by DELL on 2023/1/13.
 //
 
+/*
+ * Captures and externalizes an object's internal state so that it can be
+ * restored later, all without violating encapsulation.
+ *
+ * 在不违背封装原则的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，以便之后
+ * 能够恢复对象为之前的状态。
+ */
+
 #ifndef DESIGNPATTERNS_MEMENTO_HPP
 #define DESIGNPATTERNS_MEMENTO_HPP
 

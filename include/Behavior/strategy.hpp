@@ -2,6 +2,15 @@
 // Created by 12865 on 2023/1/2.
 //
 
+/*
+ * Define a family of algorithms, encapsulate each one, and make them
+ * interchangeable. Strategy lets the algorithm vary independently from
+ * clients that use it.
+ *
+ * 定义一族算法类，将每个算法分别封装起来，让它们可以互相替换。策略模式使算法的变化
+ * 独立于使用它们的客户端（代指使用算法的代码）。
+ */
+
 #ifndef DESIGNPATTERNS_STRATEGY_HPP
 #define DESIGNPATTERNS_STRATEGY_HPP
 

@@ -2,6 +2,15 @@
 // Created by 12865 on 2022/12/31.
 //
 
+/*
+ * Define a one-to-many dependency between objects so that when one
+ * object changes state, all its dependents are notified and updated
+ * automatically.
+ *
+ * 在对象之间定义一个一对多的依赖，使得当一个对象状态改变时，所有依赖的对象都会
+ * 自动收到通知并更新。
+ */
+
 #ifndef DESIGNPATTERNS_OBSERVER_HPP
 #define DESIGNPATTERNS_OBSERVER_HPP
 

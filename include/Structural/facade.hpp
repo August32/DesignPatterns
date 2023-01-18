@@ -2,6 +2,14 @@
 // Created by 12865 on 2022/10/6.
 //
 
+/*
+ * Provide a unified interface to a set of interfaces in a subsystem.
+ * Facade Pattern defines a higher-level interface that makes the
+ * subsystem easier to use.
+ *
+ * 门面模式为子系统中的一组接口提供了统一的接口，定义了一个高层接口让子系统更易用。
+ */
+
 #ifndef DESIGNPATTERNS_FACADE_HPP
 #define DESIGNPATTERNS_FACADE_HPP
 
