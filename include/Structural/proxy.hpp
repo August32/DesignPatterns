@@ -34,7 +34,8 @@ public:
 // 产品代理类
 class VideoPlayerProxy : public IVideoPlayer {
 public:
-    VideoPlayerProxy() = default;
+    explicit VideoPlayerProxy(int user_id)
+        : m_user_id(user_id) {}
 
     ~VideoPlayerProxy() override = default;
 
@@ -44,20 +45,24 @@ public:
 
 public:
     void play_video() override {
-        std::cout << "Play a commercial!" << std::endl;  // 播放视频前先播放一段广告
+        if (m_user_id > 10000) {  // not VIP
+            std::cout << "Play a commercial!" << std::endl;  // 播放视频前先播放一段广告
+        }
 
         video_player.play_video();
     };
 
 private:
     VideoPlayer video_player;
+
+    unsigned int m_user_id;
 };
 
 // **********************************************************************
 
 
 void proxy_test() {
-    VideoPlayerProxy video_player;
+    VideoPlayerProxy video_player(1);
 
     video_player.play_video();
 }
