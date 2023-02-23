@@ -25,15 +25,6 @@ private:
 
     ~SingletonHungry() = default;
 
-    SingletonHungry(SingletonHungry &&) = default;
-
-    SingletonHungry &operator=(SingletonHungry &&) = default;
-
-public:
-    SingletonHungry(const SingletonHungry &) = delete;
-
-    SingletonHungry &operator=(const SingletonHungry &) = delete;
-
 private:
     static SingletonHungry m_instance;
     int m_no;
@@ -70,15 +61,6 @@ private:
     };
 
     ~SingletonLazy() = default;
-
-    SingletonLazy(SingletonLazy &&) = default;
-
-    SingletonLazy &operator=(SingletonLazy &&) = default;
-
-public:
-    SingletonLazy(const SingletonLazy &) = delete;
-
-    SingletonLazy &operator=(const SingletonLazy &) = delete;
 
 private:
     static SingletonLazy *m_instance;
@@ -125,15 +107,6 @@ private:
 
     ~SingletonLazy() = default;
 
-    SingletonLazy(SingletonLazy &&) = default;
-
-    SingletonLazy &operator=(SingletonLazy &&) = default;
-
-public:
-    SingletonLazy(const SingletonLazy &) = delete;
-
-    SingletonLazy &operator=(const SingletonLazy &) = delete;
-
 private:
     int m_no;
 
@@ -162,11 +135,6 @@ private:
     SingletonTest() = default;
 
     ~SingletonTest() = default;
-
-public:
-    SingletonTest(const SingletonTest &) = delete;
-
-    SingletonTest &operator=(const SingletonTest &) = delete;
 
 private:
     static void singleton_task(bool mode) {

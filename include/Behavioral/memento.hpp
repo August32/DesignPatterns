@@ -26,10 +26,6 @@ public:
 
     ~InputText() = default;
 
-    InputText(const InputText &) = delete;
-
-    InputText &operator=(const InputText &) = delete;
-
 public:
     std::string get_text() const {
         return m_text;

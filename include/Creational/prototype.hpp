@@ -21,11 +21,6 @@ public:
 
     ~ConcreteProto() override = default;
 
-    ConcreteProto &operator=(const ConcreteProto &) = delete;
-
-private:
-    ConcreteProto(const ConcreteProto &) = default;
-
 public:
     AbstractProto *clone() override {
         return new ConcreteProto(*this);  // 根据实际情况(浅/深拷贝) 编写 拷贝构造函数

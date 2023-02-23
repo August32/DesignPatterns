@@ -21,10 +21,6 @@ public:
 
     ~ImageViewer() override = default;
 
-    ImageViewer(const ImageViewer &) = delete;
-
-    ImageViewer &operator=(const ImageViewer &) = delete;
-
 public:
     void show_image() override {
         std::cout << "Show the image!" << std::endl;
@@ -38,10 +34,6 @@ public:
             : m_image_viewer(image_viewer) {};
 
     ~ImageViewerDecorator1() override = default;
-
-    ImageViewerDecorator1(const ImageViewerDecorator1 &) = delete;
-
-    ImageViewerDecorator1 &operator=(const ImageViewerDecorator1 &) = delete;
 
 public:
     void show_image() override {
@@ -63,10 +55,6 @@ public:
             : m_image_viewer(image_viewer) {};
 
     ~ImageViewerDecorator2() override = default;
-
-    ImageViewerDecorator2(const ImageViewerDecorator2 &) = delete;
-
-    ImageViewerDecorator2 &operator=(const ImageViewerDecorator2 &) = delete;
 
 public:
     void show_image() override {

@@ -22,10 +22,6 @@ public:
 
     ~Car() = default;
 
-    Car(const Car &) = delete;
-
-    Car &operator=(const Car &) = delete;
-
 public:
     void set_interior(const std::string &interior) {
         m_interior = interior;
@@ -251,10 +247,6 @@ public:
 
     ~CarConfig() = default;
 
-    CarConfig(const CarConfig &) = delete;
-
-    CarConfig &operator=(const CarConfig &) = delete;
-
 public:
     std::string get_interior() {
         return m_interior;
@@ -284,10 +276,6 @@ public:
     };
 
     ~CarAConfig() = default;
-
-    CarAConfig(const CarAConfig &) = delete;
-
-    CarAConfig &operator=(const CarAConfig &) = delete;
 };
 
 // 具体产品配置类 - 2
@@ -300,10 +288,6 @@ public:
     };
 
     ~CarBConfig() = default;
-
-    CarBConfig(const CarBConfig &) = delete;
-
-    CarBConfig &operator=(const CarBConfig &) = delete;
 };
 
 // 具体产品配置类 - 3
@@ -316,10 +300,6 @@ public:
     };
 
     ~CarCConfig() = default;
-
-    CarCConfig(const CarCConfig &) = delete;
-
-    CarCConfig &operator=(const CarCConfig &) = delete;
 };
 
 #if 1
@@ -333,10 +313,6 @@ public:
     }
 
     ~CarBuilder() = default;
-
-    CarBuilder(const CarBuilder &) = delete;
-
-    CarBuilder &operator=(const CarBuilder &) = delete;
 
 private:
     CarBuilder *build_car_interior() {
@@ -417,10 +393,6 @@ public:
     }
 
     ~CarBuilderSmart() = default;
-
-    CarBuilderSmart(const CarBuilderSmart &) = delete;
-
-    CarBuilderSmart &operator=(const CarBuilderSmart &) = delete;
 
 private:
     CarBuilderSmart *build_car_interior() {

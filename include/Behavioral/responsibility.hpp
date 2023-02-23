@@ -81,10 +81,6 @@ public:
 
     ~HandlerChain() = default;
 
-    HandlerChain(const HandlerChain &) = delete;
-
-    HandlerChain &operator=(const HandlerChain &) = delete;
-
 public:
 
 #if RES_SMARTPTR

@@ -33,10 +33,6 @@ public:
 
     ~Adaptee() = default;
 
-    Adaptee(Adaptee &) = delete;
-
-    Adaptee &operator=(Adaptee &) = delete;
-
 private:
     int value = 0;
 
@@ -58,10 +54,6 @@ public:
     ClassAdapter() = default;
 
     ~ClassAdapter() override = default;
-
-    ClassAdapter(ClassAdapter &) = delete;
-
-    ClassAdapter &operator=(ClassAdapter &) = delete;
 
 public:
     void f1() override {
@@ -87,10 +79,6 @@ public:
     ObjectAdapter() = default;
 
     ~ObjectAdapter() override = default;
-
-    ObjectAdapter(ObjectAdapter &) = delete;
-
-    ObjectAdapter &operator=(ObjectAdapter &) = delete;
 
 private:
     Adaptee m_adaptee;

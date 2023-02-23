@@ -21,10 +21,6 @@ public:
 
     ~VideoPlayer() override = default;
 
-    VideoPlayer(const VideoPlayer &) = delete;
-
-    VideoPlayer &operator=(const VideoPlayer &) = delete;
-
 public:
     void play_video() override {
         std::cout << "Play the video!" << std::endl;
@@ -38,10 +34,6 @@ public:
         : m_user_id(user_id) {}
 
     ~VideoPlayerProxy() override = default;
-
-    VideoPlayerProxy(const VideoPlayerProxy &) = delete;
-
-    VideoPlayerProxy &operator=(const VideoPlayerProxy &) = delete;
 
 public:
     void play_video() override {

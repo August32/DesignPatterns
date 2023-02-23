@@ -36,11 +36,6 @@ private:
 
     ~ChessPieceUnitFactory() = default;
 
-public:
-    ChessPieceUnitFactory(const ChessPieceUnitFactory &) = delete;
-
-    ChessPieceUnitFactory &operator=(const ChessPieceUnitFactory &) = delete;
-
 private:
     static std::map<int, ChessPieceUnit *> m_cached_pieces;
     static ChessPieceUnit *m_piece_1;
@@ -100,10 +95,6 @@ public:
     }
 
     ~ChessBoard() = default;
-
-    ChessBoard(const ChessBoard &) = delete;
-
-    ChessBoard &operator=(const ChessBoard &) = delete;
 
 public:
     void init() {

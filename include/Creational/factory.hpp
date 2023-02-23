@@ -70,11 +70,6 @@ private:
     ~WaferFileEasyFactory() = default;
 
 public:
-    WaferFileEasyFactory(const WaferFileEasyFactory &) = delete;
-
-    WaferFileEasyFactory &operator=(const WaferFileEasyFactory &) = delete;
-
-public:
     static IWaferFile *create_wafer_file(int size_inc) {
         IWaferFile *wafer_file = nullptr;
 
@@ -96,11 +91,6 @@ private:
     WaferFileEasyFactory() = default;
 
     ~WaferFileEasyFactory() = default;
-
-public:
-    WaferFileEasyFactory(const WaferFileEasyFactory &) = delete;
-
-    WaferFileEasyFactory &operator=(const WaferFileEasyFactory &) = delete;
 
 private:
     static std::map<int, IWaferFile *> m_cached_wafer_file;
